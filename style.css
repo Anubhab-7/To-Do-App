@@ -4,68 +4,102 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
-    border: none;
-    border-radius: 25px;
-    background-color: rgb(222, 177, 93);
-    height: auto;
     width: 35vw;
-    box-shadow: 6px 5px 6px;
-
+    min-width: 320px;
+    background-color: rgb(222, 177, 93);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: 6px 5px 10px black;
 }
 
 .header{
     text-align: center;
-    padding:15px;
+    padding: 15px;
     margin: 10px;
     font-size: 2em;
-    font-weight: 900;
-    border-bottom: 1px solid white;
-    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid white;
 }
 
 .addTask{
     display: flex;
-    justify-content:space-evenly ;
-}
-input{
+    justify-content: center;
+    gap: 10px;
     padding: 10px;
-    
-    border-radius: 5px;
-    
-   
 }
 
-button:hover{
-    border: 1px solid black;
-    box-shadow: 2px 2px 2px;
+input{
+    width: 65%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
 }
 
 button{
- background-color: rgb(211, 193, 193);
- color: black;
- padding: 10px;
- border-radius:5px ;
- height: 6vh;
+    background-color: rgb(211, 193, 193);
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    box-shadow: 2px 2px 5px black;
+    transform: scale(1.03);
 }
 
 ul{
     list-style: none;
     padding: 15px;
-
+    margin: 0;
 }
 
 li{
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 8px;
-    margin:6px;
+    align-items: center;
     background-color: rgb(199, 185, 185);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
 
+.task-text{
+    flex: 1;
+}
+
+.delete-btn{
+    margin-left: 10px;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+@media(max-width: 768px){
+
+    .container{
+        width: 90vw;
+    }
+
+    .addTask{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input{
+        width: 80%;
+    }
 }

@@ -7,15 +7,29 @@
     <title>To-Do List</title>
 </head>
 <body>
+
     <div class="container">
-        <div class="header">To-Do list</div>
-        <div class="addTask">
-            <input type="text" placeholder="Add a new Task" id="inputTask">
-            <button onclick="addTask()">Add Task</button>
+
+        <div class="header">
+            To-Do List
         </div>
 
-        <ul class="task-List" id="taskList"></ul>
+        <div class="addTask">
+            <input
+                type="text"
+                placeholder="Add a new task"
+                id="inputTask"
+            >
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+        </div>
+
+        <ul id="taskList"></ul>
+
     </div>
-   <script src="script.js"></script> 
+
+    <script src="script.js"></script>
 </body>
 </html>
